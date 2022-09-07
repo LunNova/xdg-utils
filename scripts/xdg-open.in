@@ -508,6 +508,10 @@ if [ x"$DE" = x"" ]; then
     DE=generic
 fi
 
+if [ -n "$XDG_OPEN_USE_PORTAL"  ]; then
+    DE=flatpak
+fi
+
 DEBUG 2 "Selected DE $DE"
 
 # sanitize BROWSER (avoid calling ourselves in particular)
