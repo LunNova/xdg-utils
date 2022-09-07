@@ -520,6 +520,10 @@ case "${BROWSER}" in
         ;;
 esac
 
+if [ -n "$XDG_OPEN_USE_PORTAL"  ]; then
+    DE=flatpak
+fi
+
 case "$DE" in
     kde)
     open_kde "$url"
